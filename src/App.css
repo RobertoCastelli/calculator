@@ -20,26 +20,112 @@
     "panel";
 }
 
+.header {
+  grid-area: header;
+  background-color: #333333;
+  color: #f4f4f4;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: inset -8px 10px 5px -5px rgba(153, 153, 153, 0.5);
+  margin-bottom: 0.1rem;
+}
+
+.display {
+  grid-area: display;
+  background-color: #f4f4f4;
+  color: cadetblue;
+  padding: 1rem;
+  border-right: 1rem solid #666666;
+  border-left: 1rem solid #666666;
+  border-bottom: 1rem solid #999999;
+  border-top: 1rem solid #999999;
+  box-shadow: inset 0px 0px 12px 1px black;
+}
+
 .panel {
+  grid-area: panel;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: 1rem;
-  grid-template-areas:
-    "numbers operators"
-    "numbers editors";
+  grid-template-areas: "numbers";
+  padding: 1rem;
+  background-color: #999999;
+  box-shadow: inset -10px -11px 3px -5px rgba(102, 102, 102, 0.5);
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top: 1px solid #666666;
 }
 
 .numbers {
   grid-area: numbers;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 50px);
+  grid-template-areas:
+    "seven eight nine times"
+    "four five six divide"
+    "three two one minus"
+    " open zero close plus"
+    "canc undo equal equal";
 }
 
-.operators {
-  grid-area: operators;
+.nine {
+  grid-area: nine;
+}
+.eight {
+  grid-area: eight;
+}
+.seven {
+  grid-area: seven;
+}
+.six {
+  grid-area: six;
+}
+.five {
+  grid-area: five;
+}
+.four {
+  grid-area: four;
+}
+.three {
+  grid-area: three;
+}
+.two {
+  grid-area: two;
+}
+.one {
+  grid-area: one;
+}
+.zero {
+  grid-area: zero;
+}
+.canc {
+  grid-area: canc;
+}
+.undo {
+  grid-area: undo;
+}
+.minus {
+  grid-area: minus;
+}
+.plus {
+  grid-area: plus;
+}
+.equal {
+  grid-area: equal;
+}
+.close {
+  grid-area: close;
+}
+.open {
+  grid-area: open;
 }
 
-.editors {
-  grid-area: editors;
+button {
+  padding: 0;
+  cursor: pointer;
+  box-shadow: inset -10px -10px 3px -5px rgba(102, 102, 102, 0.3);
 }
 
 footer {
