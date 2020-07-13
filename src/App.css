@@ -6,7 +6,7 @@
   margin: auto;
   padding: 0 1rem 0 1rem;
   min-height: 100vh;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .content {
@@ -65,7 +65,7 @@
   grid-template-areas:
     "seven eight nine times"
     "four five six divide"
-    "three two one minus"
+    "one two three minus"
     " open zero close plus"
     "canc undo equal equal";
 }
