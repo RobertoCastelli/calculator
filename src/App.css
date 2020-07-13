@@ -102,32 +102,57 @@
 }
 .canc {
   grid-area: canc;
+  background-color: grey;
+  color: white;
 }
 .undo {
   grid-area: undo;
+  background-color: grey;
+  color: white;
 }
 .minus {
   grid-area: minus;
+  background-color: cadetblue;
 }
 .plus {
   grid-area: plus;
+  background-color: cadetblue;
 }
 .equal {
   grid-area: equal;
+  background: coral;
 }
 .close {
   grid-area: close;
+  background-color: #44b883;
 }
 .open {
   grid-area: open;
+  background-color: #44b883;
+}
+.times {
+  grid-area: times;
+  background-color: cadetblue;
+}
+.divide {
+  grid-area: divide;
+  background-color: cadetblue;
 }
 
 button {
+  font-size: large;
+  color: #333333;
   padding: 0;
   cursor: pointer;
+  border-radius: 0.3rem;
   box-shadow: inset -10px -10px 3px -5px rgba(102, 102, 102, 0.3);
 }
 
 footer {
   flex-shrink: 1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h5 {
+  color: cadetblue;
 }

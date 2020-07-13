@@ -21,7 +21,7 @@ const Panel = () => {
         <button className="plus">+</button>
         <button className="minus">-</button>
         <button className="divide">/</button>
-        <button className="times">*</button>
+        <button className="times">x</button>
         <button className="equal"> = </button>
       </div>
     </div>
