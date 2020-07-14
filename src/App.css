@@ -33,6 +33,7 @@
 
 .display {
   grid-area: display;
+  text-align: end;
   background-color: #f4f4f4;
   color: cadetblue;
   padding: 1rem;
@@ -61,12 +62,13 @@
   grid-area: numbers;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 50px);
+  grid-template-rows: repeat(6, 50px);
   grid-template-areas:
+    "open close negative perc"
     "seven eight nine times"
     "four five six divide"
     "one two three minus"
-    " open zero close plus"
+    "zero zero point plus"
     "canc undo equal equal";
 }
 
@@ -137,6 +139,20 @@
 .divide {
   grid-area: divide;
   background-color: cadetblue;
+}
+
+.point {
+  grid-area: point;
+}
+
+.negative {
+  grid-area: negative;
+  background-color: #44b883;
+}
+
+.perc {
+  grid-area: perc;
+  background-color: #44b883;
 }
 
 button {

@@ -4,14 +4,15 @@ import Display from "./Diplay";
 const Panel = () => {
   const [digit, setDigit] = useState("0");
 
-  const inputDigit = (e) => {
-    e.preventDefault();
+  const inputDigit = (e) =>
     digit === "0" ? setDigit(e.target.value) : setDigit(digit + e.target.value);
-  };
-
-  const inputCancel = () => {
-    setDigit("0");
-  };
+  const inputNegative = () =>
+    digit[0] === "-" ? setDigit(digit.slice(1)) : setDigit("-" + digit);
+  const inputCancel = () => setDigit("0");
+  const inputUndo = () => setDigit(digit.slice(0, -1));
+  const inputEqual = () => setDigit(eval(digit));
+  const inputPoint = () => digit.indexOf(".") === -1 && setDigit(digit + ".");
+  const inputPerc = () => console.log("TODO");
 
   return (
     <>
@@ -51,7 +52,7 @@ const Panel = () => {
           <button value="c" onClick={inputCancel} className="canc">
             c
           </button>
-          <button value="ce" onClick={inputDigit} className="undo">
+          <button value="ce" onClick={inputUndo} className="undo">
             ce
           </button>
           <button value="(" onClick={inputDigit} className="open">
@@ -72,7 +73,16 @@ const Panel = () => {
           <button value="*" onClick={inputDigit} className="times">
             x
           </button>
-          <button value="=" onClick={inputDigit} className="equal">
+          <button value="." onClick={inputPoint} className="point">
+            .
+          </button>
+          <button value="-" onClick={inputNegative} className="negative">
+            + -
+          </button>
+          <button value="%" onClick={inputPerc} className="perc">
+            %
+          </button>
+          <button value="=" onClick={inputEqual} className="equal">
             =
           </button>
         </div>
