@@ -44,6 +44,11 @@
   box-shadow: inset 0px 0px 12px 1px black;
 }
 
+.displayResult {
+  font-weight: bold;
+  color: #333333;
+}
+
 .panel {
   grid-area: panel;
   display: grid;
