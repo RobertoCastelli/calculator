@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import Display from "./Diplay";
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import { RiDivideLine } from "react-icons/ri";
 
 const Panel = () => {
   const [digit, setDigit] = useState("0");
   const [result, setResult] = useState("0");
 
   const inputDigit = (e) =>
-    digit === "0" ? setDigit(e.target.value) : setDigit(digit + e.target.value);
+    digit.length > 21
+      ? alert("too many digits")
+      : digit === "0"
+      ? setDigit(e.target.value)
+      : setDigit(digit + e.target.value);
 
   const inputNegative = () =>
     digit[0] === "-" ? setDigit(digit.slice(1)) : setDigit("-" + digit);
@@ -17,12 +20,14 @@ const Panel = () => {
     setDigit("0");
     setResult("0");
   };
+
   const inputUndo = () => {
     return digit.length !== 1 ? setDigit(digit.slice(0, -1)) : digit;
   };
+
   const inputEqual = () => setResult(eval(digit));
   const inputPoint = () => digit.indexOf(".") === -1 && setDigit(digit + ".");
-  const inputPerc = () => console.log("TODO");
+  const inputPerc = () => alert("work in progress :/");
 
   return (
     <>
@@ -78,7 +83,7 @@ const Panel = () => {
             -
           </button>
           <button value="/" onClick={inputDigit} className="divide">
-            <RiDivideLine />
+            /
           </button>
           <button value="*" onClick={inputDigit} className="times">
             x

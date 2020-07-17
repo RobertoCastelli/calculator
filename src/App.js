@@ -3,6 +3,7 @@ import Panel from "./components/Panel";
 
 import Header from "./components/Header";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Header />
         <Panel />
       </div>
-      <footer>copyright &copy; 2020 Roberto Castelli</footer>
+      <Footer />
     </div>
   );
 }
